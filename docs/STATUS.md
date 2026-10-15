@@ -5,7 +5,7 @@ Updated by the loop-build workflow after each wave gate.
 | Wave | Status | Last gate result |
 |---|---|---|
 | WAVE-00 bootstrap | passed | gate ok 2026-10-14 @ea32d9d (r2, .gitignore fix) |
-| WAVE-01 contracts | todo | — |
+| WAVE-01 contracts | passed | gate ok 2026-10-14 @3d78f1f |
 | WAVE-02 pipeline-writers | todo | — |
 | WAVE-03 fixtures-data-layer | todo | — |
 | WAVE-04 scene-and-ui-components | todo | — |

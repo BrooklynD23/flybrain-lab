@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "binMs": {
+      "const": 50,
+      "type": "number"
+    },
+    "channels": {
+      "items": {
+        "pattern": "^[A-Za-z0-9_]{1,20}$",
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "encoding": {
+      "const": "uint8-bin-major",
+      "type": "string"
+    },
+    "maxHz": {
+      "items": {
+        "minimum": 0,
+        "type": "number"
+      },
+      "type": "array"
+    },
+    "nBins": {
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991,
+      "type": "integer"
+    },
+    "url": {
+      "pattern": "^(?!.*\\.\\.)[a-z0-9_\\-/.]+$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "url",
+    "binMs",
+    "nBins",
+    "channels",
+    "maxHz",
+    "encoding"
+  ],
+  "type": "object"
+}

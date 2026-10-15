@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "active": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "hz": {
+            "minimum": 0,
+            "type": "number"
+          },
+          "id": {
+            "pattern": "^[A-Za-z0-9_]{1,20}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "hz"
+        ],
+        "type": "object"
+      },
+      "maxItems": 10,
+      "type": "array"
+    },
+    "behavior": {
+      "enum": [
+        "walking",
+        "grooming",
+        "feeding",
+        "escape"
+      ],
+      "type": "string"
+    },
+    "question": {
+      "maxLength": 280,
+      "minLength": 1,
+      "type": "string"
+    },
+    "tMs": {
+      "maximum": 60000,
+      "minimum": 0,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "behavior",
+    "tMs",
+    "question",
+    "active"
+  ],
+  "type": "object"
+}

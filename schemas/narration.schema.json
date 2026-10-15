@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "behavior": {
+      "enum": [
+        "walking",
+        "grooming",
+        "feeding",
+        "escape"
+      ],
+      "type": "string"
+    },
+    "cues": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "focus": {
+            "additionalProperties": false,
+            "properties": {
+              "neurons": {
+                "items": {
+                  "pattern": "^[A-Za-z0-9_]{1,20}$",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "neuropils": {
+                "items": {
+                  "pattern": "^[A-Za-z0-9_]{1,20}$",
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "neuropils",
+              "neurons"
+            ],
+            "type": "object"
+          },
+          "tMs": {
+            "maximum": 9007199254740991,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "text": {
+            "maxLength": 280,
+            "type": "string"
+          }
+        },
+        "required": [
+          "tMs",
+          "text",
+          "focus"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "qa": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "a": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "q": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "q",
+          "a"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "behavior",
+    "cues",
+    "qa"
+  ],
+  "type": "object"
+}

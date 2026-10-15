@@ -1,0 +1,22 @@
+# Tiny keyframes for the tiny MJCF.
+[grooming]
+[[grooming.keyframes]]
+t_ms = 0
+joints = { head = 0.0 }
+[[grooming.keyframes]]
+t_ms = 2000
+joints = { head = 0.4 }
+[[grooming.keyframes]]
+t_ms = 4000
+joints = { head = 0.0 }
+
+[feeding]
+[[feeding.keyframes]]
+t_ms = 0
+joints = { rostrum = 0.0 }
+[[feeding.keyframes]]
+t_ms = 2000
+joints = { rostrum = 0.9 }
+[[feeding.keyframes]]
+t_ms = 4000
+joints = { rostrum = 0.0 }

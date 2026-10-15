@@ -1,0 +1,31 @@
+{
+  "walking": {
+    "cell_types": [
+      "P9"
+    ],
+    "assumption": true,
+    "source": "https://doi.org/10.7554/eLife.53510"
+  },
+  "grooming": {
+    "cell_types": [
+      "JO-C",
+      "JO-E"
+    ],
+    "assumption": false,
+    "source": "https://www.nature.com/articles/s41586-024-07763-9"
+  },
+  "feeding": {
+    "root_ids": [
+      720575940621000004
+    ],
+    "assumption": false,
+    "source": "https://github.com/philshiu/Drosophila_brain_model"
+  },
+  "escape": {
+    "cell_types": [
+      "LC4"
+    ],
+    "assumption": true,
+    "source": "https://doi.org/10.1016/j.cub.2014.09.035"
+  }
+}

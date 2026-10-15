@@ -1,0 +1,22 @@
+<mujoco model="tiny">
+  <compiler angle="radian"/>
+  <asset>
+    <mesh name="thorax_m" vertex="-0.5 -0.25 -0.3 -0.5 -0.25 0.3 -0.5 0.25 -0.3 -0.5 0.25 0.3 0.5 -0.25 -0.3 0.5 -0.25 0.3 0.5 0.25 -0.3 0.5 0.25 0.3"/>
+    <mesh name="head_m" vertex="-0.18 -0.18 -0.18 -0.18 -0.18 0.18 -0.18 0.18 -0.18 -0.18 0.18 0.18 0.18 -0.18 -0.18 0.18 -0.18 0.18 0.18 0.18 -0.18 0.18 0.18 0.18"/>
+    <mesh name="proboscis_m" vertex="-0.2 -0.04 -0.04 -0.2 -0.04 0.04 -0.2 0.04 -0.04 -0.2 0.04 0.04 0.2 -0.04 -0.04 0.2 -0.04 0.04 0.2 0.04 -0.04 0.2 0.04 0.04"/>
+  </asset>
+  <worldbody>
+    <body name="thorax">
+      <freejoint name="root"/>
+      <geom type="mesh" mesh="thorax_m"/>
+      <body name="head" pos="0.6 0 0.1">
+        <joint name="head" type="hinge" axis="0 0 1"/>
+        <geom type="mesh" mesh="head_m"/>
+      </body>
+      <body name="proboscis" pos="0.8 0 -0.1">
+        <joint name="rostrum" type="hinge" axis="0 1 0"/>
+        <geom type="mesh" mesh="proboscis_m"/>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

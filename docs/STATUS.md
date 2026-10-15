@@ -7,7 +7,7 @@ Updated by the loop-build workflow after each wave gate.
 | WAVE-00 bootstrap | passed | gate ok 2026-10-14 @ea32d9d (r2, .gitignore fix) |
 | WAVE-01 contracts | passed | gate ok 2026-10-14 @3d78f1f |
 | WAVE-02 pipeline-writers | passed | gate ok 2026-10-14 @86c322f |
-| WAVE-03 fixtures-data-layer | todo | — |
+| WAVE-03 fixtures-data-layer | passed | gate ok 2026-10-14 @e8ea166 |
 | WAVE-04 scene-and-ui-components | todo | — |
 | WAVE-05 app-and-live-narration | todo | — |
 | WAVE-06 pipeline-sources | todo | — |

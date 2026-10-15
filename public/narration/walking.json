@@ -1,0 +1,58 @@
+{
+  "behavior": "walking",
+  "cues": [
+    {
+      "tMs": 0,
+      "text": "Simulated model, assumed signs. The legs replay recorded walking kinematics; the brain runs a spiking model whose input is our assumption: activation of P9 descending neurons.",
+      "focus": { "neuropils": ["WED_L", "WED_R"], "neurons": [] }
+    },
+    {
+      "tMs": 500,
+      "text": "Simulated model: the assumed P9 input spreads through the prow and wedge — shelves where descending neurons collect commands for the nerve cord.",
+      "focus": { "neuropils": ["PRW", "WED_L", "WED_R"], "neurons": [] }
+    },
+    {
+      "tMs": 1050,
+      "text": "Simulated model: the wave reaches the lateral accessory lobes, premotor hubs that route steering signals toward descending neurons.",
+      "focus": { "neuropils": ["LAL_L", "LAL_R"], "neurons": [] }
+    },
+    {
+      "tMs": 1600,
+      "text": "Simulated model: the compass neuropils — bridge, ellipsoid body, fan-shaped body — hum along as the fly holds a straight heading.",
+      "focus": { "neuropils": ["PB", "EB", "FB"], "neurons": [] }
+    },
+    {
+      "tMs": 2200,
+      "text": "Simulated model: every spike you see is simulated — the gait is replayed from recordings, but no brain activity was measured.",
+      "focus": { "neuropils": ["ICL_L", "ICL_R"], "neurons": [] }
+    },
+    {
+      "tMs": 2850,
+      "text": "Simulated model: antennal motion centers stay quiet; our assumed walking scene includes no wind or sound.",
+      "focus": { "neuropils": ["AMMC_L", "AMMC_R"], "neurons": [] }
+    },
+    {
+      "tMs": 3450,
+      "text": "Simulated model: the assumed drive holds steady and the simulated pattern loops with the 4-second clip.",
+      "focus": { "neuropils": ["LAL_L", "LAL_R", "PRW"], "neurons": [] }
+    }
+  ],
+  "qa": [
+    {
+      "q": "Is this real brain activity?",
+      "a": "No. The colors show a simulated model (Shiu et al. 2024) with partly assumed neurotransmitter signs — no spikes were recorded from this fly."
+    },
+    {
+      "q": "Why is the stimulus an assumption?",
+      "a": "Shiu et al. did not publish a walking stimulus, so we picked a plausible trigger — P9 descending neurons, reported to drive walking (Bidaye et al. 2020)."
+    },
+    {
+      "q": "What is the simulated model?",
+      "a": "A leaky integrate-and-fire network built on the FlyWire whole-brain connectome by Shiu et al. 2024. Synapse strengths come from connection counts; excitatory or inhibitory signs are partly assumed."
+    },
+    {
+      "q": "What lights up when the fly walks?",
+      "a": "In the model, premotor regions — wedge, prow and the lateral accessory lobes — carry activity toward descending neurons that steer the legs."
+    }
+  ]
+}

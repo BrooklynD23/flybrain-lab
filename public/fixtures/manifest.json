@@ -1,0 +1,281 @@
+{
+  "attribution": [
+    {
+      "citation": "Dorkenwald et al. (2024) Neuronal wiring diagram of an adult brain. Nature. doi:10.1038/s41586-024-07558-y; Schlegel et al. (2024) Whole-brain annotation and multi-connectome cell typing of Drosophila. Nature",
+      "licence": "CC BY-NC 4.0",
+      "name": "FlyWire data (meshes, annotations, Codex)",
+      "url": "https://flywire.ai"
+    },
+    {
+      "citation": "Dorkenwald et al. 2024 and Zenodo record 10676866",
+      "licence": "CC BY 4.0",
+      "name": "FlyWire connectivity release (Zenodo 10676866, v783)",
+      "url": "https://zenodo.org/records/10676866"
+    },
+    {
+      "citation": "Shiu et al. (2024) A Drosophila computational brain model reveals sensorimotor processing. Nature. https://www.nature.com/articles/s41586-024-07763-9",
+      "licence": "MIT",
+      "name": "Shiu et al. Drosophila brain model",
+      "url": "https://github.com/philshiu/Drosophila_brain_model"
+    },
+    {
+      "citation": "Vaxenburg et al. (2025) Whole-body physics simulation of fruit fly locomotion. Nature 643. doi:10.1038/s41586-025-09029-4",
+      "licence": "Apache-2.0",
+      "name": "flybody model, meshes, datasets",
+      "url": "https://github.com/TuragaLab/flybody"
+    },
+    {
+      "citation": "Todorov, Erez, Tassa (2012) MuJoCo: A physics engine for model-based control. IROS. doi:10.1109/IROS.2012.6386109",
+      "licence": "Apache-2.0",
+      "name": "MuJoCo",
+      "url": "https://github.com/google-deepmind/mujoco"
+    }
+  ],
+  "behaviors": [
+    {
+      "activity": {
+        "binMs": 50,
+        "channels": [
+          "AL_L",
+          "AL_R",
+          "AMMC_L",
+          "GNG",
+          "PRW",
+          "LO_R",
+          "720575940621000001",
+          "720575940621000002",
+          "720575940621000003",
+          "720575940621000004",
+          "720575940621000005"
+        ],
+        "encoding": "uint8-bin-major",
+        "maxHz": [
+          9.126445770263672,
+          9.744629859924316,
+          8.428704261779785,
+          7.004561424255371,
+          47.93834686279297,
+          9.24001693725586,
+          22.996475219726562,
+          6.641871452331543,
+          7.754590034484863,
+          7.208604335784912,
+          6.677909851074219
+        ],
+        "nBins": 80,
+        "url": "activity/walking.bin"
+      },
+      "clipSource": "reference-replay",
+      "durationMs": 4000,
+      "id": "walking",
+      "label": "Walking",
+      "narrationUrl": "/narration/walking.json",
+      "stimulus": {
+        "assumption": true,
+        "cellTypes": [
+          "P9"
+        ],
+        "description": "P9 descending neurons activated. Assumed stimulus: this is not one of the Shiu et al. model's own experiments.",
+        "source": "Bidaye et al. 2020, Neuron"
+      }
+    },
+    {
+      "activity": {
+        "binMs": 50,
+        "channels": [
+          "AL_L",
+          "AL_R",
+          "AMMC_L",
+          "GNG",
+          "PRW",
+          "LO_R",
+          "720575940621000001",
+          "720575940621000002",
+          "720575940621000003",
+          "720575940621000004",
+          "720575940621000005"
+        ],
+        "encoding": "uint8-bin-major",
+        "maxHz": [
+          6.784698009490967,
+          6.570554256439209,
+          47.984580993652344,
+          10.247529029846191,
+          9.702104568481445,
+          6.207482814788818,
+          6.995104789733887,
+          22.998809814453125,
+          5.545854568481445,
+          3.179178237915039,
+          7.326822757720947
+        ],
+        "nBins": 80,
+        "url": "activity/grooming.bin"
+      },
+      "clipSource": "keyframed",
+      "durationMs": 4000,
+      "id": "grooming",
+      "label": "Grooming",
+      "narrationUrl": "/narration/grooming.json",
+      "stimulus": {
+        "assumption": false,
+        "cellTypes": [
+          "JO-C",
+          "JO-E"
+        ],
+        "description": "Johnston's organ JO-C/JO-E mechanosensory neurons activated (antennal grooming).",
+        "source": "Shiu et al. 2024, https://www.nature.com/articles/s41586-024-07763-9"
+      }
+    },
+    {
+      "activity": {
+        "binMs": 50,
+        "channels": [
+          "AL_L",
+          "AL_R",
+          "AMMC_L",
+          "GNG",
+          "PRW",
+          "LO_R",
+          "720575940621000001",
+          "720575940621000002",
+          "720575940621000003",
+          "720575940621000004",
+          "720575940621000005"
+        ],
+        "encoding": "uint8-bin-major",
+        "maxHz": [
+          7.060007572174072,
+          8.071730613708496,
+          6.320667743682861,
+          47.99614334106445,
+          4.797138214111328,
+          10.683035850524902,
+          5.1001739501953125,
+          5.435347557067871,
+          22.998849868774414,
+          22.9998836517334,
+          7.027455806732178
+        ],
+        "nBins": 80,
+        "url": "activity/feeding.bin"
+      },
+      "clipSource": "keyframed",
+      "durationMs": 4000,
+      "id": "feeding",
+      "label": "Feeding",
+      "narrationUrl": "/narration/feeding.json",
+      "stimulus": {
+        "assumption": false,
+        "cellTypes": [
+          "sugar GRN",
+          "MN9"
+        ],
+        "description": "neu_sugar sugar gustatory receptor neurons activated; MN9 motor neuron readout (the model's own example experiment).",
+        "source": "Shiu et al. 2024 example.ipynb, https://github.com/philshiu/Drosophila_brain_model"
+      }
+    },
+    {
+      "activity": {
+        "binMs": 50,
+        "channels": [
+          "AL_L",
+          "AL_R",
+          "AMMC_L",
+          "GNG",
+          "PRW",
+          "LO_R",
+          "720575940621000001",
+          "720575940621000002",
+          "720575940621000003",
+          "720575940621000004",
+          "720575940621000005"
+        ],
+        "encoding": "uint8-bin-major",
+        "maxHz": [
+          9.398992538452148,
+          9.168375968933105,
+          6.896980285644531,
+          7.437532424926758,
+          9.89138412475586,
+          47.984580993652344,
+          7.149057865142822,
+          4.729012489318848,
+          6.2237372398376465,
+          4.264520168304443,
+          22.997472763061523
+        ],
+        "nBins": 80,
+        "url": "activity/escape.bin"
+      },
+      "clipSource": "reference-replay",
+      "durationMs": 4000,
+      "id": "escape",
+      "label": "Escape response",
+      "narrationUrl": "/narration/escape.json",
+      "stimulus": {
+        "assumption": true,
+        "cellTypes": [
+          "LC4",
+          "LPLC2"
+        ],
+        "description": "LC4 and LPLC2 looming detectors activated, upstream of the giant fiber. Assumed stimulus: this is not one of the Shiu et al. model's own experiments.",
+        "source": "von Reyn et al. 2014; Ache et al. 2019"
+      }
+    }
+  ],
+  "body": {
+    "url": "fly.glb"
+  },
+  "brain": {
+    "neurons": {
+      "items": [
+        {
+          "cellType": "P9",
+          "id": "720575940621000001",
+          "name": "fixture P9-like descending neuron",
+          "neuropil": "PRW"
+        },
+        {
+          "cellType": "JO-C",
+          "id": "720575940621000002",
+          "name": "fixture JO-C mechanosensory neuron",
+          "neuropil": "AMMC_L"
+        },
+        {
+          "cellType": "sugar GRN",
+          "id": "720575940621000003",
+          "name": "fixture sugar gustatory receptor neuron",
+          "neuropil": "GNG"
+        },
+        {
+          "cellType": "MN9",
+          "id": "720575940621000004",
+          "name": "fixture MN9-like motor neuron",
+          "neuropil": "GNG"
+        },
+        {
+          "cellType": "LC4",
+          "id": "720575940621000005",
+          "name": "fixture LC4 looming detector",
+          "neuropil": "LO_R"
+        }
+      ],
+      "url": "neurons.glb"
+    },
+    "neuropils": {
+      "ids": [
+        "AL_L",
+        "AL_R",
+        "AMMC_L",
+        "GNG",
+        "PRW",
+        "LO_R"
+      ],
+      "kind": "mesh",
+      "url": "brain.glb"
+    }
+  },
+  "dataSource": "fixture",
+  "version": 1
+}

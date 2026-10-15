@@ -1,0 +1,67 @@
+{
+  "behavior": "escape",
+  "cues": [
+    {
+      "tMs": 0,
+      "text": "Simulated model, assumed signs. The takeoff replays recorded flight kinematics; the looming stimulus is our assumption — we activate LC4 and LPLC2 looming detectors.",
+      "focus": {
+        "neuropils": ["LO_L", "LO_R", "LOP_L", "LOP_R"],
+        "neurons": []
+      }
+    },
+    {
+      "tMs": 450,
+      "text": "Simulated model: the assumed looming input fires in the lobula and lobula plate, where LC4 and LPLC2 dendrites sample the scene.",
+      "focus": {
+        "neuropils": ["LO_L", "LO_R", "LOP_L", "LOP_R"],
+        "neurons": []
+      }
+    },
+    {
+      "tMs": 1000,
+      "text": "Simulated model: the visual alarm collects in the posterior ventrolateral protocerebrum, the glomerulus zone where looming projection neurons terminate.",
+      "focus": { "neuropils": ["PVLP_L", "PVLP_R"], "neurons": [] }
+    },
+    {
+      "tMs": 1600,
+      "text": "Simulated model: the signal funnels through the wedge and clamp toward descending neurons — our assumed giant-fiber escape relay.",
+      "focus": {
+        "neuropils": ["WED_L", "WED_R", "ICL_L", "ICL_R"],
+        "neurons": []
+      }
+    },
+    {
+      "tMs": 2200,
+      "text": "Simulated model: the compass neuropils barely change — the assumed visual alarm bypasses them entirely.",
+      "focus": { "neuropils": ["PB", "EB", "FB"], "neurons": [] }
+    },
+    {
+      "tMs": 2800,
+      "text": "Simulated model: the replayed wings buzz on; every spike stays simulated, built on assumed input and assumed cell signs.",
+      "focus": { "neuropils": ["PRW"], "neurons": [] }
+    },
+    {
+      "tMs": 3400,
+      "text": "Simulated model: the looming drive fades as the assumed threat passes; residual simulated activity washes out.",
+      "focus": { "neuropils": ["PVLP_L", "PVLP_R"], "neurons": [] }
+    }
+  ],
+  "qa": [
+    {
+      "q": "What triggers escape in the model?",
+      "a": "An assumed looming stimulus on LC4 and LPLC2 visual projection neurons — a plausible threat input, not a published Shiu experiment."
+    },
+    {
+      "q": "Is the takeoff recorded?",
+      "a": "The body motion is a reference replay of flight kinematics; all brain spikes are simulated."
+    },
+    {
+      "q": "What is the giant fiber?",
+      "a": "A fast descending pathway driving jump-and-fly escapes. We mention it for context — our stimulus is an assumption on its upstream detectors."
+    },
+    {
+      "q": "Why does it say assumed signs?",
+      "a": "The model guesses whether each synapse excites or inhibits from predicted transmitters. Guesses can be wrong, so we label them."
+    }
+  ]
+}

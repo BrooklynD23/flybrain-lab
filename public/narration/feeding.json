@@ -1,0 +1,61 @@
+{
+  "behavior": "feeding",
+  "cues": [
+    {
+      "tMs": 0,
+      "text": "Simulated model, assumed signs. The proboscis reach is keyframed; the brain model gets sugar gustatory receptor neurons (sugar GRNs) as input — the taste cells for sweetness.",
+      "focus": { "neuropils": ["GNG"], "neurons": [] }
+    },
+    {
+      "tMs": 500,
+      "text": "Simulated model: the sugar GRNs fire into the gnathal ganglia, the taste gateway wrapped around the esophagus.",
+      "focus": { "neuropils": ["GNG", "VES_L", "VES_R"], "neurons": [] }
+    },
+    {
+      "tMs": 1100,
+      "text": "Simulated model: the sweet taste signal climbs through the wedge and prow toward motor circuits.",
+      "focus": { "neuropils": ["WED_L", "WED_R", "PRW"], "neurons": [] }
+    },
+    {
+      "tMs": 1700,
+      "text": "Simulated model: MN9, a motor neuron that extends the proboscis, switches on — the sugar-GRN to MN9 path traced by Shiu et al. 2024.",
+      "focus": {
+        "neuropils": ["GNG"],
+        "neurons": ["720575940660219265"]
+      }
+    },
+    {
+      "tMs": 2300,
+      "text": "Simulated model: the keyframed proboscis extends as simulated MN9 firing peaks — a plausible output, not a measured muscle drive.",
+      "focus": { "neuropils": ["GNG"], "neurons": ["720575940660219265"] }
+    },
+    {
+      "tMs": 2900,
+      "text": "Simulated model: taste activity lingers in the gnathal ganglia while the olfactory lobes stay quiet — no smell in this simulated meal.",
+      "focus": { "neuropils": ["GNG", "AL_L", "AL_R"], "neurons": [] }
+    },
+    {
+      "tMs": 3500,
+      "text": "Simulated model: the sugar drive ends and the simulated GRN firing decays back to baseline.",
+      "focus": { "neuropils": ["GNG"], "neurons": [] }
+    }
+  ],
+  "qa": [
+    {
+      "q": "What triggers feeding in the model?",
+      "a": "Sugar gustatory receptor neurons (sugar GRNs) — the input set used in the published example of Shiu et al. 2024."
+    },
+    {
+      "q": "What is MN9?",
+      "a": "A motor neuron that extends the proboscis. Shiu et al. 2024 showed simulated sugar-GRN input reaches MN9 through the connectome."
+    },
+    {
+      "q": "Are these spikes recorded?",
+      "a": "No — every spike is simulated by the Shiu et al. 2024 model, with partly assumed neurotransmitter signs."
+    },
+    {
+      "q": "Is the proboscis motion real?",
+      "a": "It is keyframed by hand, not recorded; only the simulated brain activity comes from the model."
+    }
+  ]
+}

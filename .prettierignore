@@ -8,3 +8,4 @@ docs
 *.md
 .claude
 package-lock.json
+visuals

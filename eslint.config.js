@@ -19,6 +19,7 @@ export default tseslint.config(
       "coverage/**",
       "playwright-report/**",
       "public/**",
+      "visuals/**",
     ],
   },
   ...tseslint.configs.recommended,

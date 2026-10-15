@@ -1,0 +1,61 @@
+{
+  "behavior": "grooming",
+  "cues": [
+    {
+      "tMs": 0,
+      "text": "Simulated model, assumed signs. The foreleg brush is keyframed by hand; the spiking brain model is driven at antennal mechanosensory (Johnston's organ) neurons.",
+      "focus": { "neuropils": ["AMMC_L", "AMMC_R"], "neurons": [] }
+    },
+    {
+      "tMs": 500,
+      "text": "Simulated model: the Johnston's organ input lands in the AMMC, the antenna's vibration, wind and touch center.",
+      "focus": { "neuropils": ["AMMC_L", "AMMC_R"], "neurons": [] }
+    },
+    {
+      "tMs": 1100,
+      "text": "Simulated model: the signal spreads to the inferior clamps and wedge, where descending neurons gather commands.",
+      "focus": {
+        "neuropils": ["ICL_L", "ICL_R", "WED_L", "WED_R"],
+        "neurons": []
+      }
+    },
+    {
+      "tMs": 1700,
+      "text": "Simulated model: the gnathal ganglia, which run mouthpart and head muscles, join as the head dips toward the brushing leg.",
+      "focus": { "neuropils": ["GNG"], "neurons": [] }
+    },
+    {
+      "tMs": 2300,
+      "text": "Simulated model: the prow, a premotor shelf, routes the pattern toward descending neurons bound for leg motor circuits.",
+      "focus": { "neuropils": ["PRW"], "neurons": [] }
+    },
+    {
+      "tMs": 2900,
+      "text": "Simulated model: the keyframed leg keeps brushing; each spike remains a model guess, never a recording.",
+      "focus": { "neuropils": ["WED_L", "WED_R"], "neurons": [] }
+    },
+    {
+      "tMs": 3500,
+      "text": "Simulated model: the sweep ends and the simulated antennal activity fades back to baseline.",
+      "focus": { "neuropils": ["AMMC_L", "AMMC_R"], "neurons": [] }
+    }
+  ],
+  "qa": [
+    {
+      "q": "Is the grooming motion recorded?",
+      "a": "No — this clip is keyframed by hand. Only walking and escape replay recorded kinematics."
+    },
+    {
+      "q": "Which sensory neurons start grooming?",
+      "a": "Antennal mechanosensory neurons of Johnston's organ — matching the antennal-grooming experiments of Shiu et al. 2024."
+    },
+    {
+      "q": "What does the AMMC do?",
+      "a": "It processes the antenna's mechanical senses — vibration, wind, gravity and touch — the signals a brushing foreleg produces."
+    },
+    {
+      "q": "Are these real recordings?",
+      "a": "No. All spikes are simulated by the Shiu et al. 2024 model with partly assumed neurotransmitter signs; nothing was measured from a real fly."
+    }
+  ]
+}

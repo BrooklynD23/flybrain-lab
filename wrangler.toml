@@ -1,0 +1,11 @@
+name = "flybrain-lab"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-15"
+
+[vars]
+NARRATION_MODEL = "claude-haiku-5-5"
+
+[[ratelimits]]
+name = "NARRATE_LIMITER"
+namespace_id = "1001"
+simple = { limit = 10, period = 60 }

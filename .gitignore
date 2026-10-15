@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+.coverage*
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+playwright-report/
+test-results/
+.wrangler/
+.dev.vars
+pipeline/data/
+pipeline/sims/shiu/vendor/
+pipeline/sims/shiu/.venv/

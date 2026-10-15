@@ -8,7 +8,7 @@ Updated by the loop-build workflow after each wave gate.
 | WAVE-01 contracts | passed | gate ok 2026-10-14 @3d78f1f |
 | WAVE-02 pipeline-writers | passed | gate ok 2026-10-14 @86c322f |
 | WAVE-03 fixtures-data-layer | passed | gate ok 2026-10-14 @e8ea166 |
-| WAVE-04 scene-and-ui-components | todo | — |
+| WAVE-04 scene-and-ui-components | passed | gate ok 2026-10-15 @1bc0321 |
 | WAVE-05 app-and-live-narration | todo | — |
 | WAVE-06 pipeline-sources | todo | — |
 | WAVE-07 asset-build | todo | — |

@@ -1,0 +1,63 @@
+# Joint-space keyframes (radians) for kinematics.interpolate_keyframes.
+# Joint names follow flybody fruitfly.xml; verify against the real model in HUMAN-05.
+# Every section is <= 4000 ms; times ascend.
+
+[grooming]  # front legs sweep over the antennae, head tilts
+[[grooming.keyframes]]
+t_ms = 0
+joints = { coxa_T1_left = 0.0, femur_T1_left = 0.0, tibia_T1_left = 0.0, coxa_T1_right = 0.0, femur_T1_right = 0.0, tibia_T1_right = 0.0, head = 0.0 }
+[[grooming.keyframes]]
+t_ms = 800
+joints = { coxa_T1_left = 0.6, femur_T1_left = -0.8, tibia_T1_left = 1.0, coxa_T1_right = 0.6, femur_T1_right = -0.8, tibia_T1_right = 1.0, head = 0.2 }
+[[grooming.keyframes]]
+t_ms = 1600
+joints = { coxa_T1_left = 0.2, femur_T1_left = -0.4, tibia_T1_left = 0.5, coxa_T1_right = 0.2, femur_T1_right = -0.4, tibia_T1_right = 0.5, head = 0.2 }
+[[grooming.keyframes]]
+t_ms = 2400
+joints = { coxa_T1_left = 0.6, femur_T1_left = -0.8, tibia_T1_left = 1.0, coxa_T1_right = 0.6, femur_T1_right = -0.8, tibia_T1_right = 1.0, head = -0.2 }
+[[grooming.keyframes]]
+t_ms = 3200
+joints = { coxa_T1_left = 0.2, femur_T1_left = -0.4, tibia_T1_left = 0.5, coxa_T1_right = 0.2, femur_T1_right = -0.4, tibia_T1_right = 0.5, head = -0.2 }
+[[grooming.keyframes]]
+t_ms = 4000
+joints = { coxa_T1_left = 0.0, femur_T1_left = 0.0, tibia_T1_left = 0.0, coxa_T1_right = 0.0, femur_T1_right = 0.0, tibia_T1_right = 0.0, head = 0.0 }
+
+[feeding]  # proboscis extends and retracts twice
+[[feeding.keyframes]]
+t_ms = 0
+joints = { rostrum = 0.0, haustellum = 0.0, labrum_left = 0.0, labrum_right = 0.0 }
+[[feeding.keyframes]]
+t_ms = 700
+joints = { rostrum = 0.9, haustellum = 0.6, labrum_left = 0.4, labrum_right = 0.4 }
+[[feeding.keyframes]]
+t_ms = 1400
+joints = { rostrum = 0.0, haustellum = 0.0, labrum_left = 0.0, labrum_right = 0.0 }
+[[feeding.keyframes]]
+t_ms = 2100
+joints = { rostrum = 0.9, haustellum = 0.6, labrum_left = 0.4, labrum_right = 0.4 }
+[[feeding.keyframes]]
+t_ms = 2800
+joints = { rostrum = 0.0, haustellum = 0.0, labrum_left = 0.0, labrum_right = 0.0 }
+[[feeding.keyframes]]
+t_ms = 4000
+joints = { rostrum = 0.0, haustellum = 0.0, labrum_left = 0.0, labrum_right = 0.0 }
+
+[walking_fallback]  # tripod gait: L1+R2+L3 swing together, then R1+L2+R3; 2 cycles
+[[walking_fallback.keyframes]]
+t_ms = 0
+joints = { coxa_T1_left = 0.4, coxa_T2_right = 0.2, coxa_T3_left = -0.2, coxa_T1_right = -0.4, coxa_T2_left = -0.2, coxa_T3_right = 0.2 }
+[[walking_fallback.keyframes]]
+t_ms = 500
+joints = { coxa_T1_left = -0.4, coxa_T2_right = -0.2, coxa_T3_left = 0.2, coxa_T1_right = 0.4, coxa_T2_left = 0.2, coxa_T3_right = -0.2 }
+[[walking_fallback.keyframes]]
+t_ms = 1000
+joints = { coxa_T1_left = 0.4, coxa_T2_right = 0.2, coxa_T3_left = -0.2, coxa_T1_right = -0.4, coxa_T2_left = -0.2, coxa_T3_right = 0.2 }
+[[walking_fallback.keyframes]]
+t_ms = 1500
+joints = { coxa_T1_left = -0.4, coxa_T2_right = -0.2, coxa_T3_left = 0.2, coxa_T1_right = 0.4, coxa_T2_left = 0.2, coxa_T3_right = -0.2 }
+[[walking_fallback.keyframes]]
+t_ms = 2000
+joints = { coxa_T1_left = 0.4, coxa_T2_right = 0.2, coxa_T3_left = -0.2, coxa_T1_right = -0.4, coxa_T2_left = -0.2, coxa_T3_right = 0.2 }
+[[walking_fallback.keyframes]]
+t_ms = 4000
+joints = { coxa_T1_left = 0.4, coxa_T2_right = 0.2, coxa_T3_left = -0.2, coxa_T1_right = -0.4, coxa_T2_left = -0.2, coxa_T3_right = 0.2 }

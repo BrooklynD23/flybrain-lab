@@ -1,0 +1,30 @@
+[project]
+name = "flybrain-shiu-sim"
+version = "0.1.0"
+description = "Runs the Shiu et al. LIF brain model for FlyBrain Lab (separate py3.10 env)"
+requires-python = ">=3.10,<3.11"
+# Pins copied from Shiu environment.yml at shiu_sha (pandas, joblib, pyarrow unpinned there).
+dependencies = [
+  "brian2==2.5.1",
+  "numpy>=1.24,<1.25",
+  "pandas",
+  "joblib",
+  "pyarrow",
+]
+
+[dependency-groups]
+dev = ["pytest", "pytest-cov", "ruff"]
+
+[tool.uv]
+package = false
+
+[tool.flybrain]
+shiu_sha = "91bdd1e7dcf193f3e7ca5a8933497fcef63b7960"
+
+[tool.pytest.ini_options]
+addopts = "--cov=run_behaviors --cov-report=term-missing --cov-fail-under=80"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+extend-exclude = ["vendor"]

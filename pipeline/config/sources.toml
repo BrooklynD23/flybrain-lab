@@ -1,0 +1,52 @@
+# Raw data sources for `flybrain fetch`. dest is relative to --raw, except the Shiu tarball.
+# strip_top_dir = true marks a tarball (extracted into dest with its top dir removed).
+# Dest ending "/" for a non-tarball = directory; file named after the URL's last segment.
+# sha256 unset = fetch prints the hash so a human can pin it (HUMAN-05).
+# unzip = true marks a zip archive (extracted into dest, traversal-checked).
+
+[flybody]
+url = "https://github.com/TuragaLab/flybody/archive/d015e9bfe441bd90ae431bac24c55cb74bdbce26.tar.gz"
+dest = "body/flybody/"
+strip_top_dir = true
+licence = "Apache-2.0"
+size_mb = 60
+
+[walking]
+url = "https://janelia.figshare.com/ndownloader/files/51196868"
+dest = "body/walking/"
+unzip = true
+licence = "CC BY 4.0"
+
+[flight]
+url = "https://janelia.figshare.com/ndownloader/files/51196859"
+dest = "body/flight/"
+unzip = true
+licence = "CC BY 4.0"
+
+[neuropil_counts]
+url = "https://zenodo.org/records/10676866/files/per_neuron_neuropil_count_post_783.feather"
+dest = "brain/per_neuron_neuropil_count_post_783.feather"
+licence = "CC BY 4.0"
+
+[proofread_ids]
+url = "https://zenodo.org/records/10676866/files/proofread_root_ids_783.npy"
+dest = "brain/proofread_root_ids_783.npy"
+licence = "CC BY 4.0"
+
+[synapses]
+url = "https://zenodo.org/records/10676866/files/flywire_synapses_783.feather"
+dest = "brain/flywire_synapses_783.feather"
+licence = "CC BY 4.0"
+size_mb = 9500
+optional = true
+
+[annotations]
+url = "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/a83b2776d60d5764cef36b927f5f9679c16c47a2/Supplemental_file1_neuron_annotations.tsv"
+dest = "brain/annotations.tsv"
+licence = "CC BY 4.0"
+
+[shiu]
+url = "https://github.com/philshiu/Drosophila_brain_model/archive/91bdd1e7dcf193f3e7ca5a8933497fcef63b7960.tar.gz"
+dest = "pipeline/sims/shiu/vendor/"
+strip_top_dir = true
+licence = "MIT"

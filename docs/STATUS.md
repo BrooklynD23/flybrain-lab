@@ -12,7 +12,7 @@ Updated by the loop-build workflow after each wave gate.
 | WAVE-05 app-and-live-narration | passed | gate ok 2026-10-15 @1040219 |
 | WAVE-06 pipeline-sources | passed | gate ok 2026-10-15 @07dddc7 |
 | WAVE-07 asset-build | passed | gate ok 2026-10-15 @8248a93 |
-| WAVE-08 deploy-e2e-release | todo | — |
+| WAVE-08 deploy-e2e-release | passed | gate ok 2026-10-15 @6497bd8 |
 
 | Human step | Status |
 |---|---|

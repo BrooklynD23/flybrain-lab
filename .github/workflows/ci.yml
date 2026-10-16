@@ -19,6 +19,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run lint
+      - run: npm run contracts:check
       - run: npm test
       - run: npm run build
 
@@ -32,3 +33,51 @@ jobs:
       - run: uv run --directory pipeline ruff check .
       - run: uv run --directory pipeline ruff format --check .
       - run: uv run --directory pipeline pytest
+
+  shiu:
+    name: Shiu sim env
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+      - run: uv run --directory pipeline/sims/shiu pytest
+
+  assets:
+    name: Asset budget
+    needs: web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: uv sync --project pipeline
+      - run: uv run --project pipeline flybrain budget public/fixtures
+      - name: Budget for real data
+        run: |
+          if [ -f public/data/manifest.json ]; then
+            npm ci
+            npm run build
+            uv run --project pipeline flybrain budget public/data --dist dist
+          fi
+
+  e2e:
+    name: E2E
+    needs: web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run e2e
+      - uses: actions/upload-artifact@v5
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report

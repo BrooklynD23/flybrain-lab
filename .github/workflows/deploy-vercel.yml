@@ -1,0 +1,40 @@
+name: Deploy Vercel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency: deploy-vercel
+
+jobs:
+  deploy:
+    name: Deploy to Vercel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Check token
+        id: token
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "::notice::VERCEL_TOKEN not set, skipping Vercel deploy."
+          else
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Deploy production
+        if: steps.token.outputs.present == 'true'
+        # Default build is replay mode (no secrets needed on Vercel).
+        # For live narration: set ANTHROPIC_API_KEY in the Vercel project's
+        # Production env vars, then add to the command below:
+        #   --build-env VITE_NARRATION_MODE=live
+        run: npx vercel@65.0.0 deploy --prod --yes --token="${{ secrets.VERCEL_TOKEN }}"
